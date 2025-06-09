@@ -180,7 +180,7 @@ section {
 }
 
 .telegram-btn:hover {
-  background-color: #0077b5;
+  background-color: var(--secondary-color);
 }
 
 .search-container {
