@@ -61,6 +61,8 @@ header p {
   max-width: 1200px;
   margin: 0 auto;
   gap: 1.5rem;
+  position: relative;
+  padding-right: 60px;
 }
 
 header::after {
@@ -244,6 +246,39 @@ footer {
   margin-top: 2rem;
 }
 
+/* language section */
+.language-switcher {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  display: flex;
+  gap: 0.5rem;
+  z-index: 101;
+}
+
+.language-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.25rem;
+  border-radius: 50%;
+  transition: var(--transition);
+  width: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.language-btn:hover {
+  background-color: rgba(255,255,255,0.2);
+}
+
+.language-btn.active {
+  background-color: rgba(255,255,255,0.3);
+  box-shadow: 0 0 0 2px var(--secondary-color);
+}
+
+
 @media (max-width: 768px) {
   .products-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -263,6 +298,7 @@ footer {
     flex-direction: column;
     text-align: center;
     gap: 1rem;
+    padding-right: 1rem;
   }
   
   header {
@@ -275,6 +311,12 @@ footer {
   .logo {
     height: 70px;
   }
+  .language-switcher {
+    position: static;
+    margin-top: 1rem;
+    justify-content: center;
+  }
+  
 }
 
 @media (max-width: 480px) {

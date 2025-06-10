@@ -17,8 +17,21 @@
             <h1>Takeo Khmer Products Directory</h1>
             <p>Explore authentic local products made in Takeo Province, Cambodia</p>
         </div>
+        
+        <!-- switch language to khmer -->
+        <div class="language-switcher">
+            <button class="language-btn active" data-lang="en" title="English">
+                <img src="https://flagcdn.com/w20/gb.png" srcset="https://flagcdn.com/w40/gb.png 2x" width="20" alt="English">
+            </button>
+            <button class="language-btn" data-lang="kh" title="Khmer">
+                <img src="https://flagcdn.com/w20/kh.png" srcset="https://flagcdn.com/w40/kh.png 2x" width="20" alt="Khmer">
+            </button>
+        </div>
     </div>
     </header>
+
+<!-- Add this right before your closing </body> tag -->
+<div id="google_translate_element" style="display:none;"></div>
 
     <nav>
         <button onclick="showCategory('foods')" class="active">
