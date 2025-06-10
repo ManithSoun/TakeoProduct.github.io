@@ -370,6 +370,10 @@ footer {
   .products-grid {
     grid-template-columns: 1fr;
   }
+
+  header h1 p {
+    font-size: 1.3rem;
+  }
   
    nav {
     display: flex;
@@ -388,6 +392,11 @@ footer {
   
   .logo {
     height: 60px;
+  }
+
+  .product-image {
+    width: 100%;
+    height: 100%;
   }
 
 
