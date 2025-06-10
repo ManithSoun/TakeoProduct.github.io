@@ -234,8 +234,10 @@ footer {
   }
   
   nav {
-    flex-direction: column;
+    flex-direction: co;
     align-items: stretch;
   }
+
+
 }
 
