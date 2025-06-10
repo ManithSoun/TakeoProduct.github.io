@@ -48,3 +48,15 @@ window.addEventListener('click', (event) => {
     }
   }
 });
+
+// Language switching logic (for Google Translate)
+document.querySelectorAll('.language-option').forEach(button => {
+  button.addEventListener('click', function () {
+    const lang = this.getAttribute('data-lang');
+    const select = document.querySelector("select.goog-te-combo");
+    if (select) {
+      select.value = lang === 'kh' ? 'km' : 'en'; // Google uses 'km' for Khmer
+      select.dispatchEvent(new Event('change'));
+    }
+  });
+});
