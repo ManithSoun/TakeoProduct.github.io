@@ -5,7 +5,7 @@
   --dark-color: #343a40;
   --text-color: #212529;
   --border-radius: 8px;
-  --box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   --transition: all 0.3s ease;
 }
 
@@ -38,13 +38,13 @@ header::after {
   left: 0;
   right: 0;
   height: 10px;
-  background: linear-gradient(to right, transparent, rgba(255,255,255,0.5), transparent);
+  background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.5), transparent);
 }
 
 header h1 {
   font-size: 2.2rem;
   margin-bottom: 0.5rem;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
 }
 
 header p {
@@ -80,7 +80,8 @@ nav button {
   gap: 0.5rem;
 }
 
-nav button:hover, nav button.active {
+nav button:hover,
+nav button.active {
   background-color: var(--secondary-color);
   transform: translateY(-2px);
 }
@@ -101,8 +102,13 @@ section {
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
 
 .active {
@@ -128,7 +134,7 @@ section {
 
 .product:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
 .product-image {
@@ -217,11 +223,11 @@ footer {
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
   }
-  
+
   header h1 {
     font-size: 1.8rem;
   }
-  
+
   nav button {
     padding: 0.6rem 1rem;
     font-size: 0.9rem;
@@ -232,9 +238,39 @@ footer {
   .products-grid {
     grid-template-columns: 1fr;
   }
-  
+
   nav {
     flex-direction: column;
     align-items: stretch;
   }
+}
+
+/* Google Translate Widget Styling */
+.goog-te-banner-frame.skiptranslate {
+  display: none !important;
+}
+
+body {
+  top: 0 !important;
+}
+
+.goog-te-menu-value {
+  color: #333 !important;
+  font-size: 14px !important;
+  padding: 8px 12px !important;
+  background: white !important;
+  border: 1px solid #ddd !important;
+  border-radius: 4px !important;
+}
+
+.goog-te-menu-value span:nth-child(3) {
+  display: none !important;
+  /* Hides the "Google Translate" text */
+}
+
+.goog-te-menu-value:before {
+  content: "\f1ab";
+  /* Font awesome language icon */
+  font-family: 'Font Awesome 6 Free';
+  margin-right: 8px;
 }
