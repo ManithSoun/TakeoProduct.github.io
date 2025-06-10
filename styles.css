@@ -36,7 +36,6 @@ header {
   width: auto;
   object-fit: contain;
   transition: var(--transition);
-  /* border-radius: var(--box-shadow); */
 }
 
 .header-text {
