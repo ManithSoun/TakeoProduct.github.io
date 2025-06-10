@@ -35,6 +35,7 @@ header {
   height: 80px;
   width: auto;
   object-fit: contain;
+  transition: var(--transition);
   /* border-radius: var(--box-shadow); */
 }
 
@@ -264,8 +265,11 @@ footer {
     gap: 1rem;
   }
   
-  header h1 {
-    font-size: 1.8rem;
+  header {
+    padding: 1.5rem 1.5rem;
+  }
+  header p {
+    padding: 1rem;
   }
   
   .logo {
@@ -281,6 +285,9 @@ footer {
   nav {
     flex-direction: co;
     align-items: stretch;
+  }
+  .logo {
+    height: 60px;
   }
 
 
