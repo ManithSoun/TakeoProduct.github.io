@@ -18,17 +18,35 @@
             <p>Explore authentic local products made in Takeo Province, Cambodia</p>
         </div>
         
-        <!-- switch language to khmer -->
-        <div class="language-switcher">
-            <button class="language-btn active" data-lang="en" title="English">
-                <img src="https://flagcdn.com/w20/gb.png" srcset="https://flagcdn.com/w40/gb.png 2x" width="20" alt="English">
+        <!-- Language Dropdown -->
+        <div class="language-dropdown">
+        <button class="language-current" aria-expanded="false">
+            <img src="https://flagcdn.com/w20/gb.png" width="20" alt="English">
+            <span>EN</span>
+            <svg width="12" height="8" viewBox="0 0 12 8" fill="none">
+            <path d="M1 1.5L6 6.5L11 1.5" stroke="currentColor" stroke-width="2"/>
+            </svg>
+        </button>
+        <ul class="language-options">
+            <li>
+            <button class="language-option active" data-lang="en">
+                <img src="https://flagcdn.com/w20/gb.png" width="20" alt="English">
+                <span>English</span>
             </button>
-            <button class="language-btn" data-lang="kh" title="Khmer">
-                <img src="https://flagcdn.com/w20/kh.png" srcset="https://flagcdn.com/w40/kh.png 2x" width="20" alt="Khmer">
+            </li>
+            <li>
+            <button class="language-option" data-lang="kh">
+                <img src="https://flagcdn.com/w20/kh.png" width="20" alt="Khmer">
+                <span>ភាសាខ្មែរ</span>
             </button>
+            </li>
+        </ul>
         </div>
     </div>
     </header>
+
+<!-- Google Translate Element (hidden) -->
+<div id="google_translate_element" style="display:none;"></div>
 
 <!-- Add this right before your closing </body> tag -->
 <div id="google_translate_element" style="display:none;"></div>

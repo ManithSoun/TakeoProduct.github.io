@@ -62,7 +62,7 @@ header p {
   margin: 0 auto;
   gap: 1.5rem;
   position: relative;
-  padding-right: 60px;
+  padding-right: 120px;
 }
 
 header::after {
@@ -247,35 +247,77 @@ footer {
 }
 
 /* language section */
-.language-switcher {
+.language-dropdown {
   position: absolute;
   top: 1rem;
   right: 1rem;
-  display: flex;
-  gap: 0.5rem;
   z-index: 101;
 }
 
-.language-btn {
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 0.25rem;
-  border-radius: 50%;
-  transition: var(--transition);
-  width: 32px;
+.language-current {
   display: flex;
   align-items: center;
-  justify-content: center;
+  gap: 0.5rem;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: white;
+  padding: 0.5rem 0.75rem;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: var(--transition);
 }
 
-.language-btn:hover {
-  background-color: rgba(255,255,255,0.2);
+.language-current:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+.language-current svg {
+  transition: transform 0.2s ease;
 }
 
-.language-btn.active {
-  background-color: rgba(255,255,255,0.3);
-  box-shadow: 0 0 0 2px var(--secondary-color);
+.language-dropdown[aria-expanded="true"] .language-current svg {
+  transform: rotate(180deg);
+}
+.language-options {
+  position: absolute;
+  right: 0;
+  top: 100%;
+  margin-top: 0.5rem;
+  background: white;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  list-style: none;
+  min-width: 140px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: all 0.2s ease;
+}
+.language-dropdown[aria-expanded="true"] .language-options {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+.language-option {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  width: 100%;
+  padding: 0.75rem 1rem;
+  text-align: left;
+  background: none;
+  border: none;
+  color: var(--dark-color);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.language-option:hover {
+  background: var(--light-color);
+}
+
+.language-option.active {
+  color: var(--primary-color);
+  font-weight: 600;
 }
 
 
@@ -311,10 +353,15 @@ footer {
   .logo {
     height: 70px;
   }
-  .language-switcher {
+  .language-dropdown {
     position: static;
+    display: inline-block ;
     margin-top: 1rem;
-    justify-content: center;
+    /* justify-content: center; */
+  }
+  .language-options {
+    left: 0;
+    right: auto;
   }
   
 }

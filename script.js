@@ -31,5 +31,20 @@ function filterProducts() {
     }
   });
 }
+// Get the dropdown button and options container
+const dropdownBtn = document.querySelector('.dropdown-btn');
+const dropdownOptions = document.querySelector('.dropdown-options');
 
+// Add a click event listener to the dropdown button
+dropdownBtn.addEventListener('click', () => {
+  dropdownOptions.classList.toggle('show');
+});
 
+// Close the dropdown if the user clicks outside of it
+window.addEventListener('click', (event) => {
+  if (!event.target.matches('.dropdown-btn')) {
+    if (dropdownOptions.classList.contains('show')) {
+      dropdownOptions.classList.remove('show');
+    }
+  }
+});
